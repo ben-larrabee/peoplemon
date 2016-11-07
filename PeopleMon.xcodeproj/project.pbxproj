@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8596329BCF8D95023C727DAA /* Pods_PeopleMon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD096E94CBBB9CB1C8FA6335 /* Pods_PeopleMon.framework */; };
 		C7178AD41DD0C5B7000B6BDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AD31DD0C5B7000B6BDF /* AppDelegate.swift */; };
 		C7178AD61DD0C5B7000B6BDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AD51DD0C5B7000B6BDF /* ViewController.swift */; };
 		C7178AD91DD0C5B7000B6BDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7178AD71DD0C5B7000B6BDF /* Main.storyboard */; };
 		C7178ADB1DD0C5B7000B6BDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7178ADA1DD0C5B7000B6BDF /* Assets.xcassets */; };
 		C7178ADE1DD0C5B7000B6BDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7178ADC1DD0C5B7000B6BDF /* LaunchScreen.storyboard */; };
+		C7178AEA1DD0CD10000B6BDF /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AE91DD0CD10000B6BDF /* NetworkModel.swift */; };
+		C7178AEC1DD0CD50000B6BDF /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AEB1DD0CD50000B6BDF /* WebServices.swift */; };
+		C7178AEE1DD0CD8C000B6BDF /* WebServicesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AED1DD0CD8C000B6BDF /* WebServicesExtension.swift */; };
+		C7178AF11DD0CEAA000B6BDF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AF01DD0CEAA000B6BDF /* Constants.swift */; };
+		C7178AF31DD0CF93000B6BDF /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AF21DD0CF93000B6BDF /* UserStore.swift */; };
+		C7178AF61DD0D025000B6BDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AF51DD0D025000B6BDF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A50D5B892124AB1696949962 /* Pods-PeopleMon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleMon.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleMon/Pods-PeopleMon.release.xcconfig"; sourceTree = "<group>"; };
+		AD6E59B9FD8AA7C561EF54DE /* Pods-PeopleMon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleMon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleMon/Pods-PeopleMon.debug.xcconfig"; sourceTree = "<group>"; };
 		C7178AD01DD0C5B7000B6BDF /* PeopleMon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleMon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7178AD31DD0C5B7000B6BDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7178AD51DD0C5B7000B6BDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,13 @@
 		C7178ADA1DD0C5B7000B6BDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7178ADD1DD0C5B7000B6BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7178ADF1DD0C5B7000B6BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7178AE91DD0CD10000B6BDF /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkModel.swift; path = Networking/NetworkModel.swift; sourceTree = "<group>"; };
+		C7178AEB1DD0CD50000B6BDF /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebServices.swift; path = Networking/WebServices.swift; sourceTree = "<group>"; };
+		C7178AED1DD0CD8C000B6BDF /* WebServicesExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebServicesExtension.swift; path = Networking/WebServicesExtension.swift; sourceTree = "<group>"; };
+		C7178AF01DD0CEAA000B6BDF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Components/Constants.swift; sourceTree = "<group>"; };
+		C7178AF21DD0CF93000B6BDF /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserStore.swift; path = Components/UserStore.swift; sourceTree = "<group>"; };
+		C7178AF51DD0D025000B6BDF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		FD096E94CBBB9CB1C8FA6335 /* Pods_PeopleMon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleMon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8596329BCF8D95023C727DAA /* Pods_PeopleMon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		614A26C67AAF8D6F6C4F1092 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD096E94CBBB9CB1C8FA6335 /* Pods_PeopleMon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEC7189A4A70E592230A3947 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E59B9FD8AA7C561EF54DE /* Pods-PeopleMon.debug.xcconfig */,
+				A50D5B892124AB1696949962 /* Pods-PeopleMon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C7178AC71DD0C5B7000B6BDF = {
 			isa = PBXGroup;
 			children = (
 				C7178AD21DD0C5B7000B6BDF /* PeopleMon */,
 				C7178AD11DD0C5B7000B6BDF /* Products */,
+				AEC7189A4A70E592230A3947 /* Pods */,
+				614A26C67AAF8D6F6C4F1092 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +90,9 @@
 		C7178AD21DD0C5B7000B6BDF /* PeopleMon */ = {
 			isa = PBXGroup;
 			children = (
+				C7178AF41DD0D00C000B6BDF /* Model */,
+				C7178AEF1DD0CE87000B6BDF /* Components */,
+				C7178AE81DD0CCEA000B6BDF /* Networking */,
 				C7178AD31DD0C5B7000B6BDF /* AppDelegate.swift */,
 				C7178AD51DD0C5B7000B6BDF /* ViewController.swift */,
 				C7178AD71DD0C5B7000B6BDF /* Main.storyboard */,
@@ -64,6 +103,33 @@
 			path = PeopleMon;
 			sourceTree = "<group>";
 		};
+		C7178AE81DD0CCEA000B6BDF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C7178AE91DD0CD10000B6BDF /* NetworkModel.swift */,
+				C7178AEB1DD0CD50000B6BDF /* WebServices.swift */,
+				C7178AED1DD0CD8C000B6BDF /* WebServicesExtension.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		C7178AEF1DD0CE87000B6BDF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C7178AF01DD0CEAA000B6BDF /* Constants.swift */,
+				C7178AF21DD0CF93000B6BDF /* UserStore.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		C7178AF41DD0D00C000B6BDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7178AF51DD0D025000B6BDF /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7178AE21DD0C5B7000B6BDF /* Build configuration list for PBXNativeTarget "PeopleMon" */;
 			buildPhases = (
+				38D7B614B5DA752241C9D53E /* [CP] Check Pods Manifest.lock */,
 				C7178ACC1DD0C5B7000B6BDF /* Sources */,
 				C7178ACD1DD0C5B7000B6BDF /* Frameworks */,
 				C7178ACE1DD0C5B7000B6BDF /* Resources */,
+				29AB75096DBCEB59ACCB21BE /* [CP] Embed Pods Frameworks */,
+				42231BF8AD876318F03D9F86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +165,7 @@
 				TargetAttributes = {
 					C7178ACF1DD0C5B7000B6BDF = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ZNYDH23S9S;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,13 +201,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29AB75096DBCEB59ACCB21BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleMon/Pods-PeopleMon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38D7B614B5DA752241C9D53E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		42231BF8AD876318F03D9F86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleMon/Pods-PeopleMon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C7178ACC1DD0C5B7000B6BDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7178AEA1DD0CD10000B6BDF /* NetworkModel.swift in Sources */,
+				C7178AF31DD0CF93000B6BDF /* UserStore.swift in Sources */,
 				C7178AD61DD0C5B7000B6BDF /* ViewController.swift in Sources */,
+				C7178AEC1DD0CD50000B6BDF /* WebServices.swift in Sources */,
+				C7178AF61DD0D025000B6BDF /* User.swift in Sources */,
+				C7178AEE1DD0CD8C000B6BDF /* WebServicesExtension.swift in Sources */,
 				C7178AD41DD0C5B7000B6BDF /* AppDelegate.swift in Sources */,
+				C7178AF11DD0CEAA000B6BDF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +380,10 @@
 		};
 		C7178AE31DD0C5B7000B6BDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD6E59B9FD8AA7C561EF54DE /* Pods-PeopleMon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZNYDH23S9S;
 				INFOPLIST_FILE = PeopleMon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.interapt.PeopleMon;
@@ -268,8 +394,10 @@
 		};
 		C7178AE41DD0C5B7000B6BDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50D5B892124AB1696949962 /* Pods-PeopleMon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZNYDH23S9S;
 				INFOPLIST_FILE = PeopleMon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.interapt.PeopleMon;
@@ -297,6 +425,7 @@
 				C7178AE41DD0C5B7000B6BDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
