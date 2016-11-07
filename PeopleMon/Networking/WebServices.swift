@@ -145,7 +145,7 @@ class WebServices: NSObject {
         
         // Check for an auth token and if it exists, add it to the request
         if let token = WebServices.shared.authToken {
-          urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+          urlRequest.setValue("bearer \(token)", forHTTPHeaderField: "Authorization")
         }
         
         // Check for parameters and eithe radd them to the URL or the body depending on the Method

@@ -10,16 +10,13 @@
 import UIKit
 
 struct Constants {
-  // Step 16: Add monthDayYear
   static let monthDayYear = "MM/dd/yyyy"
   public static let apiKey = "iOSandroid301november2016"
   public static let keychainIdentifier = "PeopleMonKeychain"
   public static let authTokenExpireDate = "authTokenExpireDate"
   public static let authToken = "authToken"
   static let newExpensesFound = "NewExpensesFound"
-  
-  // Step 3: Create Test Model Constants
-  // MARK: Test Model
+
   struct Test {
     static let userId = "userId"
     static let id = "id"
@@ -27,13 +24,11 @@ struct Constants {
     static let body = "body"
   }
   
-  // Step 4: JSON Constants
   struct JSON {
     static let unknownError = "An Unknown Error Has Occurred"
     static let processingError = "There was an error processing the response"
   }
   
-  // Step 9: BudgetUser Constants
   struct PeopleMonUser {
     static let fullName = "FullName"
     static let password = "Password"
@@ -55,7 +50,7 @@ struct Constants {
     static let radiusInMeters = "RadiusInMeters"
   }
   
-  // Step 10: Category Constants
+/*  // Step 10: Category Constants
   struct Category {
     static let id = "id"
     static let name = "name"
@@ -68,9 +63,9 @@ struct Constants {
     static let day = "day"
     static let year = "year"
   }
-  
+*/
 }
-
+/*
 // MARK: - Colors
 // Step 14: UIColor extension and
 extension UIColor {
@@ -88,4 +83,4 @@ struct ColorPalette {
   static let calendarTodayColor = UIColor.rgba(red: 12, green: 35, blue: 64, alpha: 0.3)
   static let calendarBorderColor = UIColor.rgba(red: 12, green: 35, blue: 64, alpha: 0.8)
 }
-
+*/
