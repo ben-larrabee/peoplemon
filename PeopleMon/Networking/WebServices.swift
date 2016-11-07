@@ -97,7 +97,7 @@ class WebServices: NSObject {
   func userAuthTokenExpired() -> Bool {
     if self.authTokenExpireDate != nil {
       let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+      dateFormatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
       
       let dateString = self.authTokenExpireDate!
       if let expireDate = dateFormatter.date(from: dateString) {

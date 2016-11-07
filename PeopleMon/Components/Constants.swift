@@ -12,13 +12,10 @@ import UIKit
 struct Constants {
   // Step 16: Add monthDayYear
   static let monthDayYear = "MM/dd/yyyy"
-  
-  // Step 7: Add keychain strings
-  public static let keychainIdentifier = "EFABKeychain"
+  public static let apiKey = "iOSandroid301november2016"
+  public static let keychainIdentifier = "PeopleMonKeychain"
   public static let authTokenExpireDate = "authTokenExpireDate"
   public static let authToken = "authToken"
-  
-  // Step 19: Add Notification constant
   static let newExpensesFound = "NewExpensesFound"
   
   // Step 3: Create Test Model Constants
@@ -37,13 +34,25 @@ struct Constants {
   }
   
   // Step 9: BudgetUser Constants
-  struct BudgetUser {
-    static let id = "id"
-    static let email = "email"
-    static let username = "username"
-    static let password = "password"
-    static let token = "token"
-    static let expirationDate = "expiration"
+  struct PeopleMonUser {
+    static let fullName = "FullName"
+    static let password = "Password"
+    static let newPassword = "NewPassword"
+    static let oldPassword = "OldPassowrd"
+    static let confirmPassword = "ConfirmPassword"
+    static let avatarBase64 = "AvatarBase64"
+    static let id = "Id"
+    static let email = "Email"
+    static let hasRegistered = "HasRegistered"
+    static let loginProvider = "LoginProvider"
+    static let Latitude = "Latitude"
+    static let Longitude = "Longitude"
+    static let lastCheckInDateTime = "LastCheckInDateTime"
+    static let token = "Token"
+    static let expirationDate = "Expiration"
+    static let ApiKey = "ApiKey"
+    static let caughtUserID = "CaughtUserId"
+    static let radiusInMeters = "RadiusInMeters"
   }
   
   // Step 10: Category Constants
@@ -55,26 +64,11 @@ struct Constants {
     static let endDate = "end_date"
     static let user = "user"
     static let amount = "amount"
-    
     static let month = "month"
     static let day = "day"
     static let year = "year"
   }
   
-  // Step 11: Expense Constants
-  struct ExpenseStruct {
-    static let id = "id"
-    static let amount = "amount"
-    static let category = "category"
-    static let date = "date"
-    static let note = "note"
-    static let categoryId = "categoryId"
-    static let categoryName = "categoryName"
-    
-    // Step 19: Add month/year
-    static let month = "month"
-    static let year = "year"
-  }
 }
 
 // MARK: - Colors
