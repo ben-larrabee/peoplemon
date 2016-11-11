@@ -30,6 +30,7 @@ class MainViewController: UIViewController, SegueHandlerType, CLLocationManagerD
   override func viewDidLoad() {
     super.viewDidLoad()
     getLocation()
+    //mapView.showsUserLocation = false
     mapView.isScrollEnabled = false
     mapView.isZoomEnabled = false
     mapView.isRotateEnabled = false
@@ -88,16 +89,8 @@ class MainViewController: UIViewController, SegueHandlerType, CLLocationManagerD
         let user = User(toGetUser: WebServices.shared.getAuthToken())
         WebServices.shared.getObject(user) { (object, error) ->() in
           if let user = object {
-            if user.avatarBase64 != "" && user.avatarBase64 != nil {
-              let imageData = NSData(base64Encoded: user.avatarBase64!, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
-              let image = UIImage(data: imageData as! Data)
-              let annotation = MapPin(coordinate: self.mapView.userLocation.coordinate, title: user.fullName!, avatar: image)
-              self.annotations.append(annotation)
-            } else {
-              let image = #imageLiteral(resourceName: "streetviewman")
-              let annotation = MapPin(coordinate: self.mapView.userLocation.coordinate, title: user.fullName!, avatar: image)
-              self.annotations.append(annotation)
-            }
+            let annotation = MapPin(coordinate: self.mapView.userLocation.coordinate, title: "Your Location", subtitle: user.avatarBase64!)
+            self.annotations.append(annotation)
           } else if let error = error {
             self.present(Utils.createAlert(message: error), animated: true, completion: nil)
           } else {
@@ -141,41 +134,88 @@ class MainViewController: UIViewController, SegueHandlerType, CLLocationManagerD
     }
   }
   
+  
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     guard annotation is MapPin else {
       return nil
     }
-    let identifier = "MapPin"
-    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-    
-    if annotationView == nil {
-      let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-      
-      pinView.isEnabled = true
-      pinView.canShowCallout = true
-      pinView.animatesDrop = false
-      
-      let leftButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-      leftButton.setImage(#imageLiteral(resourceName: "stickman"), for: .normal)
-      pinView.leftCalloutAccessoryView = leftButton
-      let rightButton = UIButton(type: .detailDisclosure)
-      rightButton.setImage(#imageLiteral(resourceName: "pokeball"), for: .normal)
-      rightButton.addTarget(self, action: #selector(catchPeopleMon), for: .touchUpInside)
-      pinView.rightCalloutAccessoryView = rightButton
-      annotationView = pinView
-    }
-    
-    if let annotationView = annotationView {
-      annotationView.annotation = annotation
-      annotationView.image = UIImage(named: "stickman.png")
-      
-      let button = annotationView.rightCalloutAccessoryView as! UIButton
-      if let index = annotations.index(of: annotation as! MapPin) {
-        button.tag = index
+    if let title = annotation.title {
+      if title == "Your Location" {
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "UserPin")
+        
+        if annotationView == nil {
+
+          let pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "UserPin")
+          pinView.isEnabled = true
+          pinView.canShowCallout = true
+          var imageView: UIImageView
+          imageView = UIImageView (image: #imageLiteral(resourceName: "streetviewman"))
+          if  let subtitle = annotation.subtitle {
+            if subtitle != "" && subtitle != nil {
+              if let imageData = NSData(base64Encoded: subtitle!, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters) {
+                let image = UIImage(data: imageData as Data)
+                UIGraphicsBeginImageContext(CGSize(width: 24, height: 30))
+                image?.draw(in: CGRect(x: 0, y: 0, width: 24, height: 30))
+                let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+                imageView = UIImageView(image: resizedImage)
+              }
+              pinView.addSubview(imageView)
+            }
+          }
+          annotationView = pinView
+        }
+        if let annotationView = annotationView {
+          annotationView.annotation = annotation
+          let imageView = UIImageView(image: #imageLiteral(resourceName: "stickman"))
+          annotationView.addSubview(imageView)
+        }
+        return annotationView
+        
+      } else {
+        let identifier = "MapPin"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+          //let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+          let pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+          pinView.isEnabled = true
+          pinView.canShowCallout = true
+          var imageView: UIImageView
+          let leftButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+          leftButton.setImage(#imageLiteral(resourceName: "stickman"), for: .normal)
+          imageView = UIImageView (image: #imageLiteral(resourceName: "stickman"))
+          if  let subtitle = annotation.subtitle {
+            if subtitle != "" && subtitle != nil {
+              if let imageData = NSData(base64Encoded: subtitle!, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters) {
+                let image = UIImage(data: imageData as Data)
+                leftButton.setImage(image, for: .normal)
+                UIGraphicsBeginImageContext(CGSize(width: 24, height: 30))
+                image?.draw(in: CGRect(x: 0, y: 0, width: 24, height: 30))
+                let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+                imageView = UIImageView(image: resizedImage)
+              }
+              pinView.addSubview(imageView)
+            }
+          }
+          pinView.leftCalloutAccessoryView = leftButton
+          let rightButton = UIButton(type: .detailDisclosure)
+          rightButton.setImage(#imageLiteral(resourceName: "pokeball"), for: .normal)
+          rightButton.addTarget(self, action: #selector(catchPeopleMon), for: .touchUpInside)
+          pinView.rightCalloutAccessoryView = rightButton
+          let label = UILabel()
+          label.text = annotation.title!
+          pinView.detailCalloutAccessoryView = label
+          annotationView = pinView
+        }
+        if let annotationView = annotationView {
+          annotationView.annotation = annotation
+          let imageView = UIImageView(image: #imageLiteral(resourceName: "stickman"))
+          annotationView.addSubview(imageView)
+        }
+        return annotationView
       }
     }
-    
-    return annotationView
+    return nil
   }
   // MARK: - IBActions
 

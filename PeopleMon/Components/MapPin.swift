@@ -13,23 +13,23 @@ class MapPin: NSObject, MKAnnotation {
   var title: String?
   var subtitle: String?
   var avatar: UIImage?
-  var base: UIImage = #imageLiteral(resourceName: "stickman")
   
-  
-  
-  init(coordinate: CLLocationCoordinate2D, title: String, avatar: UIImage?) {
+  init(coordinate: CLLocationCoordinate2D, title: String, subtitle: String?) {
     self.coordinate = coordinate
     self.title = title
-    if let avatar = avatar {
-      self.avatar = avatar
+    if let avatar = subtitle {
+      self.subtitle = avatar
+    } else {
+      self.subtitle = ""
     }
   }
+  
   init(target: Target) {
     self.coordinate = CLLocationCoordinate2D()
     self.coordinate.latitude = target.latitude!
     self.coordinate.longitude = target.longitude!
     self.title = target.userName
-    self.subtitle = target.userID
+    self.subtitle = target.avatarBase64
     if let encodedPic = target.avatarBase64 {
       if let imageData = NSData(base64Encoded: encodedPic, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters) {
         self.avatar = UIImage(data: imageData as Data)
