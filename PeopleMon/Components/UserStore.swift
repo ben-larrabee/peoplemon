@@ -14,6 +14,15 @@ class UserStore {
   
   // Step 19: Add monthExpenses, currentMonth/Year
 
+  func checkin(_ activeUser: User, completion:@escaping (_ success: Bool, _ error: String?) -> Void) {
+    WebServices.shared.authUser(activeUser) { (user, error) in
+      if user != nil {
+        completion(true, nil)
+      } else {
+        completion(false, error)
+      }
+    }
+  }
   
   func login(_ loginUser: User, completion:@escaping (_ success: Bool, _ error: String?) -> Void) {
     WebServices.shared.authUser(loginUser) { (user, error) -> () in

@@ -20,6 +20,18 @@
 		C7178AF31DD0CF93000B6BDF /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AF21DD0CF93000B6BDF /* UserStore.swift */; };
 		C7178AF61DD0D025000B6BDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AF51DD0D025000B6BDF /* User.swift */; };
 		C7178AF91DD122C9000B6BDF /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7178AF81DD122C9000B6BDF /* login.storyboard */; };
+		C7178AFC1DD12C1D000B6BDF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AFB1DD12C1D000B6BDF /* LoginViewController.swift */; };
+		C7178AFE1DD12CA9000B6BDF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7178AFD1DD12CA9000B6BDF /* Utils.swift */; };
+		C73471341DD12F420079A0E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73471331DD12F420079A0E9 /* MainViewController.swift */; };
+		C73471361DD12FBF0079A0E9 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73471351DD12FBF0079A0E9 /* SegueHandlerType.swift */; };
+		C73471391DD22C180079A0E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73471381DD22C180079A0E9 /* RegisterViewController.swift */; };
+		C734713B1DD24B8F0079A0E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C734713A1DD24B8F0079A0E9 /* MapKit.framework */; };
+		C7F65E521DD3BF6D002FDF26 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F65E511DD3BF6D002FDF26 /* ProfileViewController.swift */; };
+		C7F65E551DD4ADA9002FDF26 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F65E541DD4ADA9002FDF26 /* MapPin.swift */; };
+		C7F65E571DD4CCCF002FDF26 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F65E561DD4CCCF002FDF26 /* Target.swift */; };
+		C7F65E591DD4F9B3002FDF26 /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F65E581DD4F9B3002FDF26 /* GalleryTableViewCell.swift */; };
+		C7F65E5B1DD4FA3D002FDF26 /* GalleryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F65E5A1DD4FA3D002FDF26 /* GalleryTableViewController.swift */; };
+		C7F65E5D1DD50353002FDF26 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F65E5C1DD50353002FDF26 /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +51,21 @@
 		C7178AF21DD0CF93000B6BDF /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserStore.swift; path = Components/UserStore.swift; sourceTree = "<group>"; };
 		C7178AF51DD0D025000B6BDF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		C7178AF81DD122C9000B6BDF /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
+		C7178AFB1DD12C1D000B6BDF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
+		C7178AFD1DD12CA9000B6BDF /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Components/Utils.swift; sourceTree = "<group>"; };
+		C73471331DD12F420079A0E9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
+		C73471351DD12FBF0079A0E9 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueHandlerType.swift; path = Components/SegueHandlerType.swift; sourceTree = "<group>"; };
+		C73471371DD222AF0079A0E9 /* PeopleMon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PeopleMon.entitlements; sourceTree = "<group>"; };
+		C73471381DD22C180079A0E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = ViewControllers/RegisterViewController.swift; sourceTree = "<group>"; };
+		C734713A1DD24B8F0079A0E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C7F65E4E1DD3778F002FDF26 /* PeopleMon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeopleMon-Bridging-Header.h"; sourceTree = "<group>"; };
+		C7F65E511DD3BF6D002FDF26 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ViewControllers/ProfileViewController.swift; sourceTree = "<group>"; };
+		C7F65E531DD41842002FDF26 /* testing base64.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "testing base64.playground"; sourceTree = "<group>"; };
+		C7F65E541DD4ADA9002FDF26 /* MapPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapPin.swift; path = Components/MapPin.swift; sourceTree = "<group>"; };
+		C7F65E561DD4CCCF002FDF26 /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Target.swift; path = Model/Target.swift; sourceTree = "<group>"; };
+		C7F65E581DD4F9B3002FDF26 /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryTableViewCell.swift; path = ViewControllers/GalleryTableViewCell.swift; sourceTree = "<group>"; };
+		C7F65E5A1DD4FA3D002FDF26 /* GalleryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryTableViewController.swift; path = ViewControllers/GalleryTableViewController.swift; sourceTree = "<group>"; };
+		C7F65E5C1DD50353002FDF26 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = Model/Cell.swift; sourceTree = "<group>"; };
 		FD096E94CBBB9CB1C8FA6335 /* Pods_PeopleMon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleMon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -47,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C734713B1DD24B8F0079A0E9 /* MapKit.framework in Frameworks */,
 				8596329BCF8D95023C727DAA /* Pods_PeopleMon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +85,7 @@
 		614A26C67AAF8D6F6C4F1092 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C734713A1DD24B8F0079A0E9 /* MapKit.framework */,
 				FD096E94CBBB9CB1C8FA6335 /* Pods_PeopleMon.framework */,
 			);
 			name = Frameworks;
@@ -92,6 +121,8 @@
 		C7178AD21DD0C5B7000B6BDF /* PeopleMon */ = {
 			isa = PBXGroup;
 			children = (
+				C73471371DD222AF0079A0E9 /* PeopleMon.entitlements */,
+				C7178AFA1DD12BF0000B6BDF /* ViewControllers */,
 				C7178AF71DD122A0000B6BDF /* Storyboards */,
 				C7178AF41DD0D00C000B6BDF /* Model */,
 				C7178AEF1DD0CE87000B6BDF /* Components */,
@@ -100,6 +131,8 @@
 				C7178AD51DD0C5B7000B6BDF /* ViewController.swift */,
 				C7178ADA1DD0C5B7000B6BDF /* Assets.xcassets */,
 				C7178ADF1DD0C5B7000B6BDF /* Info.plist */,
+				C7F65E4E1DD3778F002FDF26 /* PeopleMon-Bridging-Header.h */,
+				C7F65E531DD41842002FDF26 /* testing base64.playground */,
 			);
 			path = PeopleMon;
 			sourceTree = "<group>";
@@ -119,6 +152,9 @@
 			children = (
 				C7178AF01DD0CEAA000B6BDF /* Constants.swift */,
 				C7178AF21DD0CF93000B6BDF /* UserStore.swift */,
+				C7178AFD1DD12CA9000B6BDF /* Utils.swift */,
+				C73471351DD12FBF0079A0E9 /* SegueHandlerType.swift */,
+				C7F65E541DD4ADA9002FDF26 /* MapPin.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -127,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				C7178AF51DD0D025000B6BDF /* User.swift */,
+				C7F65E561DD4CCCF002FDF26 /* Target.swift */,
+				C7F65E5C1DD50353002FDF26 /* Cell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -139,6 +177,19 @@
 				C7178AF81DD122C9000B6BDF /* login.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		C7178AFA1DD12BF0000B6BDF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7178AFB1DD12C1D000B6BDF /* LoginViewController.swift */,
+				C73471331DD12F420079A0E9 /* MainViewController.swift */,
+				C73471381DD22C180079A0E9 /* RegisterViewController.swift */,
+				C7F65E511DD3BF6D002FDF26 /* ProfileViewController.swift */,
+				C7F65E581DD4F9B3002FDF26 /* GalleryTableViewCell.swift */,
+				C7F65E5A1DD4FA3D002FDF26 /* GalleryTableViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +228,16 @@
 					C7178ACF1DD0C5B7000B6BDF = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = ZNYDH23S9S;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -266,14 +326,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7178AFC1DD12C1D000B6BDF /* LoginViewController.swift in Sources */,
+				C73471341DD12F420079A0E9 /* MainViewController.swift in Sources */,
 				C7178AEA1DD0CD10000B6BDF /* NetworkModel.swift in Sources */,
 				C7178AF31DD0CF93000B6BDF /* UserStore.swift in Sources */,
+				C7F65E521DD3BF6D002FDF26 /* ProfileViewController.swift in Sources */,
 				C7178AD61DD0C5B7000B6BDF /* ViewController.swift in Sources */,
+				C7F65E5B1DD4FA3D002FDF26 /* GalleryTableViewController.swift in Sources */,
+				C7F65E551DD4ADA9002FDF26 /* MapPin.swift in Sources */,
 				C7178AEC1DD0CD50000B6BDF /* WebServices.swift in Sources */,
+				C7178AFE1DD12CA9000B6BDF /* Utils.swift in Sources */,
+				C7F65E591DD4F9B3002FDF26 /* GalleryTableViewCell.swift in Sources */,
 				C7178AF61DD0D025000B6BDF /* User.swift in Sources */,
 				C7178AEE1DD0CD8C000B6BDF /* WebServicesExtension.swift in Sources */,
 				C7178AD41DD0C5B7000B6BDF /* AppDelegate.swift in Sources */,
+				C73471391DD22C180079A0E9 /* RegisterViewController.swift in Sources */,
+				C73471361DD12FBF0079A0E9 /* SegueHandlerType.swift in Sources */,
+				C7F65E571DD4CCCF002FDF26 /* Target.swift in Sources */,
 				C7178AF11DD0CEAA000B6BDF /* Constants.swift in Sources */,
+				C7F65E5D1DD50353002FDF26 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,11 +469,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PeopleMon/PeopleMon.entitlements;
 				DEVELOPMENT_TEAM = ZNYDH23S9S;
 				INFOPLIST_FILE = PeopleMon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.interapt.PeopleMon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PeopleMon/PeopleMon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -413,11 +489,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PeopleMon/PeopleMon.entitlements;
 				DEVELOPMENT_TEAM = ZNYDH23S9S;
 				INFOPLIST_FILE = PeopleMon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.interapt.PeopleMon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PeopleMon/PeopleMon-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

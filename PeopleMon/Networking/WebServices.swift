@@ -11,7 +11,6 @@
 import Foundation
 import Alamofire
 import Freddy
-// Step 7: Import Valet
 import Valet
 
 // Step 2: Create WebServices
@@ -83,17 +82,24 @@ class WebServices: NSObject {
     authTokenExpireDate = expiration
   }
   
-  // Step 7: function to check for authToken
+  func getAuthToken() -> String {
+    if let authToken = authToken {
+      return authToken
+    }
+    return ""
+  }
+  
   func userAuthTokenExists() -> Bool {
     if self.authToken != nil {
+      print(self.authToken!)
       return true
     }
     else {
+      print("didn't find authtoken")
       return false
     }
   }
   
-  // Step 7: function to check if authToken is expired
   func userAuthTokenExpired() -> Bool {
     if self.authTokenExpireDate != nil {
       let dateFormatter = DateFormatter()
@@ -139,24 +145,25 @@ class WebServices: NSObject {
       case .restRequest(let model):
         // Create the url request with the base url and add on the path component passed in via the NetworkModel
         urlRequest = URLRequest(url: URL.appendingPathComponent(model.path()))
-        
         // Set the method to the method passed in via the NetworkModel
         urlRequest.httpMethod = model.method().rawValue
-        
+        //print(urlRequest)
         // Check for an auth token and if it exists, add it to the request
         if let token = WebServices.shared.authToken {
+          //print("a token was presented")
           urlRequest.setValue("bearer \(token)", forHTTPHeaderField: "Authorization")
+          //print(urlRequest.value(forHTTPHeaderField: "Authorization")!)
         }
         
         // Check for parameters and eithe radd them to the URL or the body depending on the Method
         if let params = model.toDictionary() {
+
           if model.method() == .get {
             return try! URLEncoding.default.encode(urlRequest, with: params)
           } else {
             return try! JSONEncoding.default.encode(urlRequest, with: params)
           }
         }
-        
         return urlRequest
       }
     }

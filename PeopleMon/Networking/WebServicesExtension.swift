@@ -119,10 +119,14 @@ extension WebServices {
   }
   
   // Step 9: Auth and Register Functions
+
+  
+  
   func authUser<T: NetworkModel>(_ user: T, completion:@escaping (_ user: T?, _ error: String?) -> ()) {
     request(WebServices.shared.baseURL + user.path(), method: user.method(), parameters: user.toDictionary(), encoding: URLEncoding.default)
-      .responseJSON { (response) in
+    .responseJSON { (response) in
         WebServices.parseResponseObject(response: response, completion: completion)
+    print(response)
     }
   }
   
@@ -132,4 +136,18 @@ extension WebServices {
         WebServices.parseResponseObject(response: response, completion: completion)
     }
   }
+  
+  func checkInUser<T: NetworkModel>(_ user: T, completion:@escaping (_ user: T?, _ error: String?) -> ()) {
+    let temp = request(WebServices.shared.baseURL + user.path(), method: user.method(), parameters: user.toDictionary(), encoding: URLEncoding.default)
+     print(temp)
+      temp.responseJSON { (response) in
+        WebServices.parseResponseObject(response: response, completion: completion)
+        print(response)
+    }
+  }
+  
+  
+  
+  
+  
 }

@@ -1,0 +1,39 @@
+//
+//  MapPin.swift
+//  PeopleMon
+//
+//  Created by Ben Larrabee on 11/10/16.
+//  Copyright © 2016 Ben Larrabee. All rights reserved.
+//
+
+import MapKit
+
+class MapPin: NSObject, MKAnnotation {
+  var coordinate: CLLocationCoordinate2D
+  var title: String?
+  var subtitle: String?
+  var avatar: UIImage?
+  var base: UIImage = #imageLiteral(resourceName: "stickman")
+  
+  
+  
+  init(coordinate: CLLocationCoordinate2D, title: String, avatar: UIImage?) {
+    self.coordinate = coordinate
+    self.title = title
+    if let avatar = avatar {
+      self.avatar = avatar
+    }
+  }
+  init(target: Target) {
+    self.coordinate = CLLocationCoordinate2D()
+    self.coordinate.latitude = target.latitude!
+    self.coordinate.longitude = target.longitude!
+    self.title = target.userName
+    self.subtitle = target.userID
+    if let encodedPic = target.avatarBase64 {
+      if let imageData = NSData(base64Encoded: encodedPic, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters) {
+        self.avatar = UIImage(data: imageData as Data)
+      }
+    }
+  }
+}

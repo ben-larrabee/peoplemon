@@ -11,11 +11,11 @@ import UIKit
 
 struct Constants {
   static let monthDayYear = "MM/dd/yyyy"
-  public static let apiKey = "iOSandroid301november2016"
+  public static let apiKey = "iOS301november2016"
+  
   public static let keychainIdentifier = "PeopleMonKeychain"
   public static let authTokenExpireDate = "authTokenExpireDate"
   public static let authToken = "authToken"
-  static let newExpensesFound = "NewExpensesFound"
 
   struct Test {
     static let userId = "userId"
@@ -28,6 +28,17 @@ struct Constants {
     static let unknownError = "An Unknown Error Has Occurred"
     static let processingError = "There was an error processing the response"
   }
+  struct Target {
+    static let UserId = "UserId"
+    static let UserName = "UserName"
+    static let AvatarBase64 = "AvatarBase64"
+    static let Longitude = "Longitude"
+    static let Latitude = "Latitude"
+    static let caughtUserID = "CaughtUserId"
+    static let Created = "Created"
+    static let RadiusInMeters = "RadiusInMeters"
+  }
+  
   
   struct PeopleMonUser {
     static let fullName = "FullName"
@@ -36,18 +47,21 @@ struct Constants {
     static let oldPassword = "OldPassowrd"
     static let confirmPassword = "ConfirmPassword"
     static let avatarBase64 = "AvatarBase64"
-    static let id = "Id"
+    static let id = "UserId"
     static let email = "Email"
     static let hasRegistered = "HasRegistered"
     static let loginProvider = "LoginProvider"
     static let Latitude = "Latitude"
     static let Longitude = "Longitude"
+    static let lastCheckInLatitude = "LastCheckInLatitude"
+    static let lastCheckInLongitude = "LastCheckInLongitude"
     static let lastCheckInDateTime = "LastCheckInDateTime"
-    static let token = "Token"
-    static let expirationDate = "Expiration"
+    static let token = "access_token"
+    static let expirationDate = ".expires"
     static let ApiKey = "ApiKey"
     static let caughtUserID = "CaughtUserId"
     static let radiusInMeters = "RadiusInMeters"
+
   }
   
 /*  // Step 10: Category Constants
