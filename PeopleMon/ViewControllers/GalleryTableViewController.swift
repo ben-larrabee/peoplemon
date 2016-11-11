@@ -13,7 +13,7 @@ class GalleryTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      let targets = Target(toSee: 100)   //Target(token: WebServices.shared.getAuthToken())
+      let targets = Target(token: WebServices.shared.getAuthToken())   //Target(token: WebServices.shared.getAuthToken())
       WebServices.shared.getObjects(targets) { (objects, errors) -> Void in
         if let targets = objects {
           self.cells = targets
